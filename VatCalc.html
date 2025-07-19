@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title> Meetingselect VAT  Calculator by Saksham</title>
+        <link rel ="stylesheet" href="styles/CalcStyle.css">
+    </head>
+
+    <body class = "light" id="body">
+        <h1> 🌿 Meetingselect VAT Calculator</h1>
+
+        <!--Logo-->
+        <div class="logo">
+            <img src="your-photo.jpg" alt="Logo of Saksham"/>
+        </div>
+
+        <div class="container">
+            <label for="modeSelect"> Choose Mode</label>
+            <select id ="modeSelect" onchange="switchMode()">
+                <option value="vat"> Calculate VAT Amounts</option>
+                <option value="rate"> Find VAT % </option>
+            </select>
+
+            <label for="vatRate" id="rateLabel"> Enter VAT % </label>
+            <input type="number" id="vatRate" placeholder=" e.g. 9% or 21% or any x %" />
+
+            <label> Enter values:</label>
+            <input type="number" id="vatAmount" placeholder="VAT Amount" />
+            <input type="number" id="vatExcl" placeholder="VAT Exclusive Amount" />
+            <input type="number" id="vatIncl" placeholder="VAT Inclusive Amount" />
+
+            <button onclick="calculate()"> CALCULATE</button>
+            <button onclick="clearFields()"> CLEAR</button>
+
+            <div class="results" id="results"> </div>
+            <div class="history" id="history"> <strong>History: </strong></div>
+        </div>
+
+        <div class ="footer"> Built by Saksham Setia </div>
+        <script src="VATCal.js"></script>
+    </body>
+
+</html>
