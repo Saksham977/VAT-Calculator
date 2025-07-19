@@ -106,7 +106,7 @@ function calculate(){
             rate=( (vatIncl-vatExcl) / vatExcl)* 100;
         }
         else if(combo3){
-            rate=( vatAmount / (vatIncl-vatExcl) )* 100;
+            rate=( vatAmount / (vatIncl-vatAmount) )* 100;
         }
         else{
             alert("Please enter atleast two values to calculate the VAT %");
