@@ -36,8 +36,8 @@ function clearResults(){
 //Function to clear all the fields, previously entered.
 function clearFields(){
     document.getElementById("vatRate").value="";
-    document.getElementById("vatAmount").value="";
     document.getElementById("vatExcl").value="";
+    document.getElementById("vatAmount").value="";
     document.getElementById("vatIncl").value="";
     clearResults();
 }
@@ -47,8 +47,8 @@ function clearFields(){
 function calculate(){
     const mode=document.getElementById("modeSelect").value;                 //To get the mode entered by user
     const vatRate= parseFloat(document.getElementById("vatRate").value);    //To get the vat rate
-    const vatAmount=parseFloat(document.getElementById("vatAmount").value); //To get the vat amount
     const vatExcl=parseFloat(document.getElementById("vatExcl").value);     //To get the vatExcl
+    const vatAmount=parseFloat(document.getElementById("vatAmount").value); //To get the vat amount
     const vatIncl=parseFloat(document.getElementById("vatIncl").value);     //To get the vatIncl
     const resultDiv=document.getElementById("results");                     //Result Field
 
@@ -60,7 +60,7 @@ function calculate(){
             return  ;
         }
 
-        const values=[vatAmount, vatExcl, vatIncl].filter(v=>!isNaN(v));
+        const values=[vatExcl, vatAmount, vatIncl].filter(v=>!isNaN(v));
         if(values.length!==1){
             alert("Enter exactly one value out of 3, vat or excl or incl");
             return;
